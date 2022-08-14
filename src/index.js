@@ -1,11 +1,6 @@
 import "./styles.css";
+import pageLoad from "./page-load";
+
+pageLoad();
 
 
-function page() {
-    const html = document.querySelector("html");
-
-    html.classList.add("html");
-
-}
-
-page();

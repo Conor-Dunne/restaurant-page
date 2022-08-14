@@ -5,5 +5,12 @@
 }
 
 html {
-    background-color: grey;
+   background-image: url(../images/matheus-frade-KO46ZfbNdtY-unsplash.jpg);
+   background-size: cover;
+   filter: blur(2px);
+}
+
+header {
+    height: 100px;
+    background-color: whitesmoke;
 }
