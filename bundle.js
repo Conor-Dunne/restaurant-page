@@ -260,7 +260,7 @@ eval("module.exports = __webpack_require__.p + \"108557213a0574aa173d.jpg\";\n\n
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"main": 0
+/******/ 			"bundle": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
