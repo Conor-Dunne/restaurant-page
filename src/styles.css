@@ -21,8 +21,7 @@ body {
 header {
      background-color: whitesmoke;
      border-bottom: 1px solid grey;
-     /* flex-grow: 1; */
-     height: 64px;
+     flex-grow: 1;
      display: flex;
      justify-content: flex-end;
      align-items: center;
@@ -40,8 +39,7 @@ header {
 
 .content {
     width: 80%;
-    max-width: 50vw;
-    min-width: 60vh;
+    max-width: 700px;
     background-color: white;
     border-radius: 5px;
     padding: 6.5rem;
@@ -91,7 +89,8 @@ article {
 }
 
 .tab-content-wrapper img {
-    width: 300px;
+    width: 90%;
+    max-width: 500px;
     border-radius: 3px;
     box-shadow: 4px 5px 12px 0px #888888;
 }
