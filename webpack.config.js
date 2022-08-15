@@ -9,6 +9,7 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
+        // assetModuleFilename: "[name][ext]",
     },
     module: {
         rules: [
@@ -24,8 +25,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Webpack App",
+            title: "Restaurant Page",
             filname: "index.html",
+            template: "src/template.html"
         })
     ]
 };

@@ -5,12 +5,85 @@
 }
 
 html {
-   background-image: url(../images/matheus-frade-KO46ZfbNdtY-unsplash.jpg);
-   background-size: cover;
-   filter: blur(2px);
+    font-size: 10px;
+}
+
+body {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    height: 100px;
-    background-color: whitesmoke;
+     background-color: whitesmoke;
+     border-bottom: 1px solid grey;
+     flex-grow: 1;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 5px 20px;
+}
+
+.main {
+    flex-grow: 8; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.content {
+    width: 80%;
+    max-width: 50vw;
+    min-height: 60vh;
+    background-color: white;
+    border-radius: 5px;
+    padding: 6.5rem;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    font-size: 3rem;
+    list-style-type: none;
+}
+
+nav ul:hover {
+    cursor: pointer;
+}
+
+.tab-content-wrapper {
+    text-align: center;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.tab-title {
+    /* text-align: center; */
+}
+
+article p {
+    font-size: 1.6rem;
+}
+
+article ul {
+    flex-direction: column;
+    list-style: none;
+}
+
+article {
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+    font-family: monospace;
+    line-height: 1.5;
 }
