@@ -7,23 +7,31 @@ import contactTab from "./contactTab";
 
 pageLoad(homeTab());
 
+const tabContent = document.querySelector(".content");
+
+function removeTabContent () {
+    const contentWrapper = document.querySelector(".tab-content-wrapper");
+    contentWrapper.remove();
+}
+
+
+
 
 const navBar = document.querySelector("nav");
-console.log(navBar);
 
 navBar.addEventListener("click", changeTab);
 
-function test(e) {
-    console.log(e.target.textContent);
-}
 
 
 function changeTab(el) {
     if (el.target.textContent == "Home") {
-        pageLoad(homeTab())
+        removeTabContent();
+        tabContent.appendChild(homeTab())
     } else if (el.target.textContent == "Menu") {
-        pageLoad(menuTab());
+        removeTabContent();
+        tabContent.appendChild(menuTab())
     }   else if (el.target.textContent == "Contact") {
-        pageLoad(contactTab());
+        removeTabContent();
+        tabContent.appendChild(contactTab());
     } else return;
 }

@@ -21,11 +21,13 @@ body {
 header {
      background-color: whitesmoke;
      border-bottom: 1px solid grey;
-     flex-grow: 1;
+     /* flex-grow: 1; */
+     height: 64px;
      display: flex;
      justify-content: flex-end;
      align-items: center;
      padding: 5px 20px;
+
 }
 
 .main {
@@ -39,7 +41,7 @@ header {
 .content {
     width: 80%;
     max-width: 50vw;
-    min-height: 60vh;
+    min-width: 60vh;
     background-color: white;
     border-radius: 5px;
     padding: 6.5rem;
@@ -87,3 +89,18 @@ article {
     font-family: monospace;
     line-height: 1.5;
 }
+
+.tab-content-wrapper img {
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 4px 5px 12px 0px #888888;
+}
+
+/* Photo by <a href="https://unsplash.com/@matheusfrade?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matheus Frade</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+  
+
+/* Photo by <a href="https://unsplash.com/@covertnine?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Toomey</a> on <a href="https://unsplash.com/s/photos/restaurant-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+
+/* Photo by <a href="https://unsplash.com/@ajk_th?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Kovacs</a> on <a href="https://unsplash.com/s/photos/restaurant-interior?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+  

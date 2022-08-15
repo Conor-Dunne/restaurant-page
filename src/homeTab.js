@@ -1,5 +1,5 @@
 
-
+import restaurantPic from "./images/alexander-kovacs-PK1pzUGQSjc-unsplash.jpg"; 
 
 function homeTab() {
 
@@ -30,8 +30,13 @@ function homeTab() {
     hoursList.append(monday, tueToSun );
     hoursCard.appendChild(hoursList);
 
+    //add img
+    const img = document.createElement("img");
+    img.src = restaurantPic;
+
+
     
-    wrapper.append(homeTitle, introCard,hoursCard);
+    wrapper.append(homeTitle, introCard,hoursCard,img);
 
     return wrapper;
 
