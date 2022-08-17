@@ -1,3 +1,38 @@
+//menu items obj constructor
+const SandwichItem = (name, price) => {
+    const category = "Sandwiches";
+    const Name = name;
+    const Price = price;
+
+
+    return {category, getName, getPrice};
+}
+
+const PizzaItem = (name, price) => {
+    const category = "Pizzas";
+    const Name = name;
+    const Price = price;
+
+    return {category, getName, getPrice};
+}
+
+const DrinkItem = (name, price) => {
+    const category = "Drinks";
+    const Name = name;
+    const Price = price;
+
+    return {category, getName, getPrice};
+
+}
+
+const BLT = SandwichItem("BLT", "2.50");
+const cheeseSand = SandwichItem("Cheese sandwich", "2");
+
+console.log(BLT);
+
+
+
+
 function menuTab () {
 
     //create wrapper

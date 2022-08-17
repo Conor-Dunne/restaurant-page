@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch",
-    "deploy": "gh-pages -b main -d build"
-  },
+    "watch": "webpack --watch"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Conor-Dunne/restaurant-page.git"
