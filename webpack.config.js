@@ -9,8 +9,19 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
-        // assetModuleFilename: "[name][ext]",
+        clean: true,
+        assetModuleFilename: "[name][ext]",
     },
+    devServer: {
+        static: {
+          directory: path.resolve(__dirname, "dist")
+        },
+        port: 3000,
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
+      },
     module: {
         rules: [
             {
