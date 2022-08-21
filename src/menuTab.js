@@ -13,10 +13,10 @@ let Milk = new MenuItem(catTwo, "Milk", "1");
 
 menu.push(BLT,Milk);
 
-console.log(menu);
 
-const menuTab = function () {
-    const contentTab = document.querySelector(".content");
+function menuTab() {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("tab-content-wrapper","flex-col");
     const title = document.createElement("h1");
     title.textContent = "Menu";
    
@@ -58,7 +58,8 @@ const menuTab = function () {
 
 
 
-    contentTab.append(title, sandwichMenu, drinksMenu);
+    wrapper.append(title, sandwichMenu, drinksMenu);
+    return wrapper;
 }
 
 
