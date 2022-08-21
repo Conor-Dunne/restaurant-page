@@ -21,7 +21,6 @@ body {
 header {
      background-color: whitesmoke;
      border-bottom: 1px solid grey;
-     flex-grow: 1;
      display: flex;
      justify-content: flex-end;
      align-items: center;
