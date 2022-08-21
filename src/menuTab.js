@@ -1,87 +1,65 @@
-let sandwiches = [];
-let pizzas = [];
-let drinks = [];
+const catOne = "sandwiches";
+const catTwo = "drinks";
+let menu = [];
 
-
-//menu items obj constructor
-const SandwichItem = (name, price) => {
-    const category = "Sandwiches";
-    const getName = name;
-    const getPrice = price;
-
-
-    return {category, getName, getPrice};
+const MenuItem = function(category,name,price) {
+     this.category = category;
+     this.name = name;
+     this.price = price;
 }
 
-const PizzaItem = (name, price) => {
-    const category = "Pizzas";
-    const getName = name;
-    const getPrice = price;
+let BLT = new MenuItem(catOne, "BLT", "3");
+let Milk = new MenuItem(catTwo, "Milk", "1");
 
-    return {category, getName, getPrice};
+menu.push(BLT,Milk);
+
+console.log(menu);
+
+const menuTab = function () {
+    const contentTab = document.querySelector(".content");
+    const title = document.createElement("h1");
+    title.textContent = "Menu";
+   
+
+    const sandwichMenu = document.createElement("div");
+    sandwichMenu.classList.add("menu-card");
+    const sandwichMenuTitle = document.createElement("h2");
+    sandwichMenuTitle.textContent = "Sandwiches";
+    sandwichMenu.appendChild(sandwichMenuTitle);
+
+
+    const drinksMenu = document.createElement("div");
+    drinksMenu.classList.add("menu-card");
+    const drinksMenuTitle = document.createElement("h2");
+    drinksMenuTitle.textContent = "Drinks";
+    drinksMenu.appendChild(drinksMenuTitle);
+
+
+    menu.forEach(obj => {
+        const menuRow = document.createElement("div");
+        menuRow.classList.add("menu-row");
+        
+        const itemName = document.createElement("div");
+        itemName.classList.add("items");
+        itemName.textContent = obj.name;
+
+        const itemPrice = document.createElement("div");
+        itemPrice.classList.add("items");
+        itemPrice.textContent = `$ ${obj.price}`;
+
+        menuRow.append(itemName,itemPrice);
+
+        if (obj.category == catOne) {
+            sandwichMenu.appendChild(menuRow)
+        } else drinksMenu.appendChild(menuRow);
+
+
+    })
+
+
+
+    contentTab.append(title, sandwichMenu, drinksMenu);
 }
 
-const DrinkItem = (name, price) => {
-    const category = "Drinks";
-    const getName = name;
-    const getPrice = price;
 
-    return {category, getName, getPrice};
-
-}
-
-const BLT = SandwichItem("BLT", "2.50");
-const cheeseSand = SandwichItem("Cheese sandwich", "2");
-
-sandwiches.push(BLT, cheeseSand);
-
-console.log(sandwiches);
-
-const addMenuItems = function (obj) {
-
-    const nameColumn = document.createElement("div");
-    nameColumn.classList.add("menu-item-name-col");
-    const nameh3 = document.createElement("h3");
-    nameh3.textContent = obj.getName;
-    nameColumn.appendChild(nameh3);
-
-    const priceColumn = document.createElement("div");
-    priceColumn.classList.add("menu-item-price-col");
-    const priceh3 = document.createElement("h3");
-    priceh3.textContent = `$ ${obj.getPrice}`;
-    priceColumn.appendChild(priceh3);
-
-    console.log(nameColumn);
-
-}
-
-
-function menuTab () {
-
-    //create wrapper
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("tab-content-wrapper","flex-col");
-
-    //Add tab title
-    const menuTitle = document.createElement("div");
-    menuTitle.classList.add("tab-title");
-    const titleH1 = document.createElement("h1");
-    titleH1.textContent = "Menu";
-    menuTitle.appendChild(titleH1);
-
-    //Add menu section cards
-    const sandwichSection = document.createElement("div");
-    sandwichSection.classList.add("menu-sections");
-    const sandwichTitle = document.createElement("h2");
-    sandwichTitle.textContent = "Sandwiches:"
-    sandwichSection.appendChild(sandwichTitle);
-
-
-    wrapper.append(menuTitle, sandwichSection);
-
-    return wrapper;
-
-}
-
-addMenuItems();
 export default menuTab;

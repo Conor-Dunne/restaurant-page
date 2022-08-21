@@ -44,6 +44,10 @@ header {
     border-radius: 5px;
     padding: 6.5rem;
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
 }
 
 nav ul {
@@ -68,9 +72,6 @@ nav ul:hover {
     gap: 3rem;
 }
 
-.tab-title {
-    /* text-align: center; */
-}
 
 article p {
     font-size: 1.6rem;
@@ -93,6 +94,19 @@ article {
     max-width: 500px;
     border-radius: 3px;
     box-shadow: 4px 5px 12px 0px #888888;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-row {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 /* Photo by <a href="https://unsplash.com/@matheusfrade?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matheus Frade</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
