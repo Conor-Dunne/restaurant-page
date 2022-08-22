@@ -8,10 +8,12 @@ const MenuItem = function(category,name,price) {
      this.price = price;
 }
 
-let BLT = new MenuItem(catOne, "BLT", "3");
-let Milk = new MenuItem(catTwo, "Milk", "1");
+const BLT = new MenuItem(catOne, "BLT", "3");
+const ham = new MenuItem(catOne,"Ham", "2.50");
+const Milk = new MenuItem(catTwo, "Milk", "1");
+const soda = new MenuItem(catTwo, "Sodas", "1");
 
-menu.push(BLT,Milk);
+menu.push(BLT,Milk,ham,soda);
 
 
 function menuTab() {

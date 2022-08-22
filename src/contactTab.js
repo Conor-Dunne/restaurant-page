@@ -11,7 +11,17 @@ function contactTab () {
     titleH1.textContent = "Contact Us";
     contactTitle.appendChild(titleH1);
 
-    wrapper.appendChild(contactTitle)
+    //add contact info card
+    const contactInfo = document.createElement("div");
+    // contactInfo.classList.add("menu-card");
+    const contactTxt = document.createElement("p");
+    contactTxt.textContent = "Ph: 080-555-555";
+    const emailTxt = document.createElement("p");
+    emailTxt.textContent = "Email: bob@juicygoose.jp";
+    contactInfo.append(contactTxt,emailTxt );
+
+
+    wrapper.append(contactTitle, contactInfo);
 
     return wrapper;
 
